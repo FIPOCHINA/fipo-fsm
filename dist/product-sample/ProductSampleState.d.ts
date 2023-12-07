@@ -1,4 +1,4 @@
-export declare const enum ProductSampleState {
+export declare enum ProductSampleState {
     WaitingForPS = "WaitingForPS",
     OrganizedForSending = "OrganizedForSending",
     InReview = "InReview",

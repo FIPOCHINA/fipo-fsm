@@ -1,4 +1,4 @@
-export declare const enum MarketingMaterialState {
+export declare enum MarketingMaterialState {
     Draft = "Draft",
     Finalized = "Finalized",
     InReview = "InReview",

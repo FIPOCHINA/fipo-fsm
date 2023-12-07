@@ -1,46 +1,47 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MarketingMaterialTransitions = void 0;
+const MarketingMaterialState_1 = require("./MarketingMaterialState");
 const MarketingMaterialAction_1 = require("./MarketingMaterialAction");
 exports.MarketingMaterialTransitions = [
     {
         from: '*',
         action: MarketingMaterialAction_1.MarketingMaterialAction.Cancel,
-        to: "Cancelled" /* MarketingMaterialState.Cancelled */
+        to: MarketingMaterialState_1.MarketingMaterialState.Cancelled
     },
     {
-        from: "Draft" /* MarketingMaterialState.Draft */,
+        from: MarketingMaterialState_1.MarketingMaterialState.Draft,
         action: MarketingMaterialAction_1.MarketingMaterialAction.Finalize,
-        to: "Finalized" /* MarketingMaterialState.Finalized */
+        to: MarketingMaterialState_1.MarketingMaterialState.Finalized
     },
     {
-        from: "Finalized" /* MarketingMaterialState.Finalized */,
+        from: MarketingMaterialState_1.MarketingMaterialState.Finalized,
         action: MarketingMaterialAction_1.MarketingMaterialAction.SendForReview,
-        to: "InReview" /* MarketingMaterialState.InReview */
+        to: MarketingMaterialState_1.MarketingMaterialState.InReview
     },
     {
-        from: "InReview" /* MarketingMaterialState.InReview */,
+        from: MarketingMaterialState_1.MarketingMaterialState.InReview,
         action: MarketingMaterialAction_1.MarketingMaterialAction.ReviewApprove,
-        to: "ReviewApproved" /* MarketingMaterialState.ReviewApproved */
+        to: MarketingMaterialState_1.MarketingMaterialState.ReviewApproved
     },
     {
-        from: "InReview" /* MarketingMaterialState.InReview */,
+        from: MarketingMaterialState_1.MarketingMaterialState.InReview,
         action: MarketingMaterialAction_1.MarketingMaterialAction.ReviewReject,
-        to: "ReviewRejected" /* MarketingMaterialState.ReviewRejected */
+        to: MarketingMaterialState_1.MarketingMaterialState.ReviewRejected
     },
     {
-        from: "ReviewApproved" /* MarketingMaterialState.ReviewApproved */,
+        from: MarketingMaterialState_1.MarketingMaterialState.ReviewApproved,
         action: MarketingMaterialAction_1.MarketingMaterialAction.NotifyCustomer,
-        to: "CustomerNotified" /* MarketingMaterialState.CustomerNotified */
+        to: MarketingMaterialState_1.MarketingMaterialState.CustomerNotified
     },
     {
-        from: "ReviewRejected" /* MarketingMaterialState.ReviewRejected */,
+        from: MarketingMaterialState_1.MarketingMaterialState.ReviewRejected,
         action: MarketingMaterialAction_1.MarketingMaterialAction.NotifyCustomerOfRejection,
-        to: "CustomerModifyingForRejection" /* MarketingMaterialState.CustomerModifyingForRejection */
+        to: MarketingMaterialState_1.MarketingMaterialState.CustomerModifyingForRejection
     },
     {
-        from: "CustomerModifyingForRejection" /* MarketingMaterialState.CustomerModifyingForRejection */,
+        from: MarketingMaterialState_1.MarketingMaterialState.CustomerModifyingForRejection,
         action: MarketingMaterialAction_1.MarketingMaterialAction.Finalize,
-        to: "Finalized" /* MarketingMaterialState.Finalized */
+        to: MarketingMaterialState_1.MarketingMaterialState.Finalized
     }
 ];

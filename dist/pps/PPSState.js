@@ -1,16 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PPSStateDisplayName = void 0;
+exports.PPSStateDisplayName = exports.PPSState = void 0;
+var PPSState;
+(function (PPSState) {
+    PPSState["WaitingForPPS"] = "WaitingForPPS";
+    PPSState["OrganizedForSending"] = "OrganizedForSending";
+    PPSState["InternalReviewed"] = "InternalReviewed";
+    PPSState["InReview"] = "InReview";
+    PPSState["ReviewApproved"] = "ReviewApproved";
+    PPSState["CustomerNotified"] = "CustomerNotified";
+    PPSState["Cancelled"] = "Cancelled";
+    PPSState["ReviewRejected"] = "ReviewRejected";
+    PPSState["ReviewApprovedWithChanges"] = "ReviewApprovedWithChanges";
+    PPSState["CustomerModifyingForRejection"] = "CustomerModifyingForRejection";
+    PPSState["ApprovedWithChanges"] = "ApprovedWithChanges";
+})(PPSState || (exports.PPSState = PPSState = {}));
 exports.PPSStateDisplayName = {
-    ["WaitingForPPS" /* PPSState.WaitingForPPS */]: '等待产前样',
-    ["OrganizedForSending" /* PPSState.OrganizedForSending */]: '寄送整理已完成',
-    ["InReview" /* PPSState.InReview */]: '正式审核中',
-    ["InternalReviewed" /* PPSState.InternalReviewed */]: '预审通过',
-    ["ReviewApproved" /* PPSState.ReviewApproved */]: '审核通过',
-    ["CustomerNotified" /* PPSState.CustomerNotified */]: '已通知客户',
-    ["Cancelled" /* PPSState.Cancelled */]: '款式取消',
-    ["ReviewRejected" /* PPSState.ReviewRejected */]: '审核未通过',
-    ["ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */]: '审核通过（有修改）',
-    ["CustomerModifyingForRejection" /* PPSState.CustomerModifyingForRejection */]: '客户修改中',
-    ["ApprovedWithChanges" /* PPSState.ApprovedWithChanges */]: '审核通过（有修改）',
+    [PPSState.WaitingForPPS]: '等待产前样',
+    [PPSState.OrganizedForSending]: '寄送整理已完成',
+    [PPSState.InReview]: '正式审核中',
+    [PPSState.InternalReviewed]: '预审通过',
+    [PPSState.ReviewApproved]: '审核通过',
+    [PPSState.CustomerNotified]: '已通知客户',
+    [PPSState.Cancelled]: '款式取消',
+    [PPSState.ReviewRejected]: '审核未通过',
+    [PPSState.ReviewApprovedWithChanges]: '审核通过（有修改）',
+    [PPSState.CustomerModifyingForRejection]: '客户修改中',
+    [PPSState.ApprovedWithChanges]: '审核通过（有修改）',
 };

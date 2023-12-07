@@ -1,4 +1,4 @@
-export const enum ProductSampleState {
+export enum ProductSampleState {
   WaitingForPS = 'WaitingForPS',
   OrganizedForSending = 'OrganizedForSending',
   InReview = 'InReview',

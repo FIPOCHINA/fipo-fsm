@@ -1,41 +1,42 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductSampleTransitions = void 0;
+const ProductSampleState_1 = require("./ProductSampleState");
 const ProductSampleAction_1 = require("./ProductSampleAction");
 exports.ProductSampleTransitions = [
     {
-        from: "WaitingForPS" /* ProductSampleState.WaitingForPS */,
+        from: ProductSampleState_1.ProductSampleState.WaitingForPS,
         action: ProductSampleAction_1.ProductSampleAction.Organize,
-        to: "OrganizedForSending" /* ProductSampleState.OrganizedForSending */
+        to: ProductSampleState_1.ProductSampleState.OrganizedForSending
     },
     {
-        from: "OrganizedForSending" /* ProductSampleState.OrganizedForSending */,
+        from: ProductSampleState_1.ProductSampleState.OrganizedForSending,
         action: ProductSampleAction_1.ProductSampleAction.SendForReview,
-        to: "InReview" /* ProductSampleState.InReview */
+        to: ProductSampleState_1.ProductSampleState.InReview
     },
     {
-        from: "InReview" /* ProductSampleState.InReview */,
+        from: ProductSampleState_1.ProductSampleState.InReview,
         action: ProductSampleAction_1.ProductSampleAction.ReviewApprove,
-        to: "ReviewApproved" /* ProductSampleState.ReviewApproved */
+        to: ProductSampleState_1.ProductSampleState.ReviewApproved
     },
     {
-        from: "InReview" /* ProductSampleState.InReview */,
+        from: ProductSampleState_1.ProductSampleState.InReview,
         action: ProductSampleAction_1.ProductSampleAction.ReviewReject,
-        to: "ReviewRejected" /* ProductSampleState.ReviewRejected */
+        to: ProductSampleState_1.ProductSampleState.ReviewRejected
     },
     {
-        from: "ReviewApproved" /* ProductSampleState.ReviewApproved */,
+        from: ProductSampleState_1.ProductSampleState.ReviewApproved,
         action: ProductSampleAction_1.ProductSampleAction.NotifyCustomer,
-        to: "CustomerNotified" /* ProductSampleState.CustomerNotified */
+        to: ProductSampleState_1.ProductSampleState.CustomerNotified
     },
     {
-        from: "ReviewRejected" /* ProductSampleState.ReviewRejected */,
+        from: ProductSampleState_1.ProductSampleState.ReviewRejected,
         action: ProductSampleAction_1.ProductSampleAction.NotifyCustomerOfRejection,
-        to: "CustomerModifyingForRejection" /* ProductSampleState.CustomerModifyingForRejection */
+        to: ProductSampleState_1.ProductSampleState.CustomerModifyingForRejection
     },
     {
-        from: "CustomerModifyingForRejection" /* ProductSampleState.CustomerModifyingForRejection */,
+        from: ProductSampleState_1.ProductSampleState.CustomerModifyingForRejection,
         action: ProductSampleAction_1.ProductSampleAction.Organize,
-        to: "OrganizedForSending" /* ProductSampleState.OrganizedForSending */
+        to: ProductSampleState_1.ProductSampleState.OrganizedForSending
     }
 ];
