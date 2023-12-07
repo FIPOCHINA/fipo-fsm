@@ -1,0 +1,1 @@
+{"version":3,"file":"ProductSampleTransitions.d.ts","sourceRoot":"","sources":["../../src/product-sample/ProductSampleTransitions.ts"],"names":[],"mappings":"AAAA,OAAO,EAAgC,kBAAkB,EAAC,MAAM,sBAAsB,CAAA;AACtF,OAAO,EAAC,eAAe,EAAC,MAAM,kBAAkB,CAAA;AAChD,OAAO,EAAC,mBAAmB,EAAC,MAAM,uBAAuB,CAAC;AAE1D,eAAO,MAAM,wBAAwB,EAAE,eAAe,CAClD,mBAAmB,EACnB,kBAAkB,CACrB,EAoCA,CAAA"}

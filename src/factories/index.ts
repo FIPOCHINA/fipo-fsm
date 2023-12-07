@@ -7,6 +7,18 @@ import {
     DesignDocTransitions
 } from "../design-doc";
 import {PPSAction, PPSActionDisplayName, PPSState, PPSStateDisplayName, PPSTransitions} from "../pps";
+import {
+    ProductSampleAction,
+    ProductSampleActionDisplayName,
+    ProductSampleState,
+    ProductSampleStateDisplayName,
+    ProductSampleTransitions
+} from "../product-sample";
+import {
+    MarketingMaterialAction, MarketingMaterialActionDisplayName,
+    MarketingMaterialState,
+    MarketingMaterialStateDisplayName, MarketingMaterialTransitions
+} from "../marketing-material";
 
 export const DesignDocStateMachineFactory = <T extends object | null>(
     subject: T,
@@ -30,6 +42,34 @@ export const PPSStateMachineFactory = <T extends object | null>(
             transitions: PPSTransitions,
             actionDict: PPSActionDisplayName,
             stateDict: PPSStateDisplayName,
+        },
+        subject,
+    )
+}
+
+export const ProductSampleStateMachineFactory = <T extends object | null>(
+    subject: T,
+) => {
+    return new StateMachine<T, ProductSampleAction, ProductSampleState>(
+        {
+            name: 'ProductSample',
+            transitions: ProductSampleTransitions,
+            actionDict: ProductSampleActionDisplayName,
+            stateDict: ProductSampleStateDisplayName,
+        },
+        subject,
+    )
+}
+
+export const MarketingMaterialStateMachineFactory = <T extends object | null>(
+    subject: T,
+) => {
+    return new StateMachine<T, MarketingMaterialAction, MarketingMaterialState>(
+        {
+            name: 'MarketingMaterial',
+            transitions: MarketingMaterialTransitions,
+            actionDict: MarketingMaterialActionDisplayName,
+            stateDict: MarketingMaterialStateDisplayName,
         },
         subject,
     )
