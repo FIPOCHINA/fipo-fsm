@@ -8,4 +8,4 @@ InReview --> ReviewApprovedWithChanges : ReviewApproveWithChanges
 ReviewApproved --> CustomerNotified : NotifyCustomer
 ReviewRejected --> CustomerModifyingForRejection : NotifyCustomerOfRejection
 CustomerModifyingForRejection --> OrganizedForSending : Organize
-ReviewApprovedWithChanges --> OrganizedForSending : Organize
+ReviewApprovedWithChanges --> CustomerNotified : NotifyCustomerOfChanges

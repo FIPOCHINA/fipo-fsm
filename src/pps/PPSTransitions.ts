@@ -53,8 +53,8 @@ export const PPSTransitions: TransitionParam<
     },
     {
         from: PPSState.ReviewApprovedWithChanges,
-        action: PPSAction.Organize,
-        to: PPSState.OrganizedForSending
+        action: PPSAction.NotifyCustomerOfChanges,
+        to: PPSState.CustomerNotified
     }
 
 ]

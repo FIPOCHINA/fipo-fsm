@@ -50,7 +50,7 @@ exports.PPSTransitions = [
     },
     {
         from: "ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */,
-        action: PPSAction_1.PPSAction.Organize,
-        to: "OrganizedForSending" /* PPSState.OrganizedForSending */
+        action: PPSAction_1.PPSAction.NotifyCustomerOfChanges,
+        to: "CustomerNotified" /* PPSState.CustomerNotified */
     }
 ];
