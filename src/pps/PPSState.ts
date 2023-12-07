@@ -1,4 +1,4 @@
-export const enum PPSState {
+export enum PPSState {
   WaitingForPPS = 'WaitingForPPS',
   OrganizedForSending = 'OrganizedForSending',
   InternalReviewed = 'InternalReviewed',
