@@ -7,7 +7,8 @@ export declare enum DesignDocAction {
     NotifyCustomerOfChanges = "NotifyCustomerOfChanges",
     NotifyCustomerOfRejection = "NotifyCustomerOfRejection",
     ReviewReject = "ReviewReject",
-    ReviewApproveWithChanges = "ReviewApproveWithChanges"
+    ReviewApproveWithChanges = "ReviewApproveWithChanges",
+    Cancel = "Cancel"
 }
 export declare const DesignDocActionDisplayName: Record<DesignDocAction, string>;
 //# sourceMappingURL=DesignDocAction.d.ts.map

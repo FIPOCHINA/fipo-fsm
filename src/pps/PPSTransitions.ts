@@ -55,55 +55,6 @@ export const PPSTransitions: TransitionParam<
         from: PPSState.ReviewApprovedWithChanges,
         action: PPSAction.Organize,
         to: PPSState.OrganizedForSending
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.InternalReviewApprove,
-        to: PPSState.InternalReviewed
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.InternalReviewRejected,
-        to: PPSState.OrganizedForSending
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.Organize,
-        to: PPSState.OrganizedForSending
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.ReviewApprove,
-        to: PPSState.ReviewApproved
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.ReviewReject,
-        to: PPSState.ReviewRejected
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.ReviewApproveWithChanges,
-        to: PPSState.ReviewApprovedWithChanges
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.ReviewReject,
-        to: PPSState.ReviewRejected
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.ReviewApproveWithChanges,
-        to: PPSState.ReviewApprovedWithChanges
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.ReviewReject,
-        to: PPSState.ReviewRejected
-    },
-    {
-        from: PPSState.CustomerNotified,
-        action: PPSAction.ReviewApproveWithChanges,
-        to: PPSState.ReviewApprovedWithChanges
     }
+
 ]

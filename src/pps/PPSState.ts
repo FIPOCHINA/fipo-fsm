@@ -22,6 +22,6 @@ export const PPSStateDisplayName: Record<PPSState, string> = {
   [PPSState.Cancelled]: '款式取消',
   [PPSState.ReviewRejected]: '审核未通过',
   [PPSState.ReviewApprovedWithChanges]: '审核通过（有修改）',
-  [PPSState.CustomerModifyingForRejection]: '客户修改中（驳回）',
+  [PPSState.CustomerModifyingForRejection]: '客户修改中',
   [PPSState.ApprovedWithChanges]: '审核通过（有修改）',
 }

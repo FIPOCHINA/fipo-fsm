@@ -8,6 +8,7 @@ export enum DesignDocAction {
   NotifyCustomerOfRejection = 'NotifyCustomerOfRejection',
   ReviewReject = 'ReviewReject',
   ReviewApproveWithChanges = 'ReviewApproveWithChanges',
+  Cancel = 'Cancel',
 }
 
 export const DesignDocActionDisplayName: Record<DesignDocAction, string> = {
@@ -20,4 +21,5 @@ export const DesignDocActionDisplayName: Record<DesignDocAction, string> = {
   [DesignDocAction.NotifyCustomerOfRejection]: '通知客户未通过',
   [DesignDocAction.ReviewReject]: '审核未通过',
   [DesignDocAction.ReviewApproveWithChanges]: '审核通过（有修改）',
+  [DesignDocAction.Cancel]: '款式取消',
 }

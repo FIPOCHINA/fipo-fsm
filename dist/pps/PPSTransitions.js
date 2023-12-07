@@ -52,55 +52,5 @@ exports.PPSTransitions = [
         from: "ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */,
         action: PPSAction_1.PPSAction.Organize,
         to: "OrganizedForSending" /* PPSState.OrganizedForSending */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.InternalReviewApprove,
-        to: "InternalReviewed" /* PPSState.InternalReviewed */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.InternalReviewRejected,
-        to: "OrganizedForSending" /* PPSState.OrganizedForSending */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.Organize,
-        to: "OrganizedForSending" /* PPSState.OrganizedForSending */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.ReviewApprove,
-        to: "ReviewApproved" /* PPSState.ReviewApproved */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.ReviewReject,
-        to: "ReviewRejected" /* PPSState.ReviewRejected */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.ReviewApproveWithChanges,
-        to: "ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.ReviewReject,
-        to: "ReviewRejected" /* PPSState.ReviewRejected */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.ReviewApproveWithChanges,
-        to: "ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.ReviewReject,
-        to: "ReviewRejected" /* PPSState.ReviewRejected */
-    },
-    {
-        from: "CustomerNotified" /* PPSState.CustomerNotified */,
-        action: PPSAction_1.PPSAction.ReviewApproveWithChanges,
-        to: "ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */
     }
 ];

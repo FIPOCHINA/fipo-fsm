@@ -11,6 +11,6 @@ exports.PPSStateDisplayName = {
     ["Cancelled" /* PPSState.Cancelled */]: '款式取消',
     ["ReviewRejected" /* PPSState.ReviewRejected */]: '审核未通过',
     ["ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */]: '审核通过（有修改）',
-    ["CustomerModifyingForRejection" /* PPSState.CustomerModifyingForRejection */]: '客户修改中（驳回）',
+    ["CustomerModifyingForRejection" /* PPSState.CustomerModifyingForRejection */]: '客户修改中',
     ["ApprovedWithChanges" /* PPSState.ApprovedWithChanges */]: '审核通过（有修改）',
 };

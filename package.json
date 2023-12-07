@@ -8,7 +8,8 @@
     "test": "jest",
     "lint": "eslint --ext .js,.ts src/",
     "format": "eslint --ext .js,.ts src/ --fix",
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "viz": "ts-node src/VizStateMachine.ts"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",

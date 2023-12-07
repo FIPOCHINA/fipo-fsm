@@ -1,5 +1,6 @@
 import {describe, expect, it} from '@jest/globals'
-import {DesignDocState, DesignDocStateMachineFactory, StateStore,} from '../src'
+import {DesignDocState, StateStore,} from '../src'
+import {DesignDocStateMachineFactory} from "../src/factories";
 
 class MockDesignDoc {
   @StateStore('DesignDoc')

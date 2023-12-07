@@ -12,6 +12,7 @@ var DesignDocAction;
     DesignDocAction["NotifyCustomerOfRejection"] = "NotifyCustomerOfRejection";
     DesignDocAction["ReviewReject"] = "ReviewReject";
     DesignDocAction["ReviewApproveWithChanges"] = "ReviewApproveWithChanges";
+    DesignDocAction["Cancel"] = "Cancel";
 })(DesignDocAction || (exports.DesignDocAction = DesignDocAction = {}));
 exports.DesignDocActionDisplayName = {
     [DesignDocAction.Finalize]: '定稿',
@@ -23,4 +24,5 @@ exports.DesignDocActionDisplayName = {
     [DesignDocAction.NotifyCustomerOfRejection]: '通知客户未通过',
     [DesignDocAction.ReviewReject]: '审核未通过',
     [DesignDocAction.ReviewApproveWithChanges]: '审核通过（有修改）',
+    [DesignDocAction.Cancel]: '款式取消',
 };

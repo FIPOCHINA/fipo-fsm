@@ -1,0 +1,13 @@
+stateDiagram-v2
+Draft --> FinalDraft : Finalize
+FinalDraft --> InReview : SendForReview
+InReview --> ReviewApproved : ReviewApprove
+InReview --> ReviewRejected : ReviewReject
+InReview --> ApprovedWithChanges : ReviewApproveWithChanges
+ReviewApproved --> CustomerNotified : NotifyCustomer
+ReviewRejected --> CustomerModifyingForRejection : NotifyCustomerOfRejection
+CustomerModifyingForRejection --> FinalDraft : Finalize
+ApprovedWithChanges --> CustomerModifyingForChanges : NotifyCustomerOfChanges
+CustomerModifyingForChanges --> CustomerNotified : NotifyCustomer
+ReviewApprovedWithChanges --> InHouseChanged : InHouseChanged
+InHouseChanged --> CustomerNotified : NotifyCustomer
