@@ -4,6 +4,11 @@ exports.MarketingMaterialTransitions = void 0;
 const MarketingMaterialAction_1 = require("./MarketingMaterialAction");
 exports.MarketingMaterialTransitions = [
     {
+        from: '*',
+        action: MarketingMaterialAction_1.MarketingMaterialAction.Cancel,
+        to: "Cancelled" /* MarketingMaterialState.Cancelled */
+    },
+    {
         from: "Draft" /* MarketingMaterialState.Draft */,
         action: MarketingMaterialAction_1.MarketingMaterialAction.Finalize,
         to: "Finalized" /* MarketingMaterialState.Finalized */

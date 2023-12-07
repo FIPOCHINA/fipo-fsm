@@ -7,6 +7,11 @@ export const DesignDocTransitions: TransitionParam<
   DesignDocState
 >[] = [
   {
+    from: '*',
+    action: DesignDocAction.Cancel,
+    to: DesignDocState.Cancelled,
+  },
+  {
     from: DesignDocState.Draft,
     action: DesignDocAction.Finalize,
     to: DesignDocState.FinalDraft,

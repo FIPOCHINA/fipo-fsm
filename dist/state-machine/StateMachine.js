@@ -22,6 +22,7 @@ class StateMachine {
     subject;
     stateHasActions = new Map();
     actionToStates = new Map();
+    anyFromTransition;
     actionDict;
     stateDict;
     name;
@@ -46,7 +47,17 @@ class StateMachine {
                 throw new OneActionHasMultipleToStatesError(action, existingState, to);
             }
             this.actionToStates.set(key, to);
+            if (from === '*') {
+                this.anyFromTransition = transaction;
+            }
         });
+        // handle from *
+        if (this.anyFromTransition) {
+            const { action, to } = this.anyFromTransition;
+            this.stateHasActions.forEach((actions, from) => {
+                actions.push(action);
+            });
+        }
     }
     can(currentState) {
         if (!currentState) {
@@ -73,7 +84,10 @@ class StateMachine {
         if (!actions.includes(action)) {
             return null;
         }
-        const tos = this.actionToStates.get(actionToStatesKey(currentState, action));
+        let tos = this.actionToStates.get(actionToStatesKey(currentState, action));
+        if (!tos) {
+            tos = this.actionToStates.get(actionToStatesKey('*', action));
+        }
         if (!tos) {
             return null;
         }
@@ -86,10 +100,10 @@ class StateMachine {
     visualize(showDisplayName = false) {
         if (showDisplayName) {
             const { stateDict, actionDict } = this;
-            const stateDiagramElements = this.params.transitions.map(({ from, to, action }) => `${stateDict[from]} --> ${stateDict[to]} : ${actionDict[action]}`);
+            const stateDiagramElements = this.params.transitions.map(({ from, to, action }) => `${stateDict[from] ?? "[*]"} --> ${stateDict[to]} : ${actionDict[action]}`);
             return `stateDiagram-v2\n${stateDiagramElements.join('\n')}\n`;
         }
-        const stateDiagramElements = this.params.transitions.map(({ from, to, action }) => `${from} --> ${to} : ${action}`);
+        const stateDiagramElements = this.params.transitions.map(({ from, to, action }) => `${from === "*" ? "[*]" : from} --> ${to} : ${action}`);
         return `stateDiagram-v2\n${stateDiagramElements.join('\n')}\n`;
     }
     getSubjectKey() {

@@ -4,6 +4,11 @@ exports.PPSTransitions = void 0;
 const PPSAction_1 = require("./PPSAction");
 exports.PPSTransitions = [
     {
+        from: '*',
+        action: PPSAction_1.PPSAction.Cancel,
+        to: "Cancelled" /* PPSState.Cancelled */
+    },
+    {
         from: "WaitingForPPS" /* PPSState.WaitingForPPS */,
         action: PPSAction_1.PPSAction.Organize,
         to: "OrganizedForSending" /* PPSState.OrganizedForSending */

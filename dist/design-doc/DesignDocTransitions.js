@@ -4,6 +4,11 @@ exports.DesignDocTransitions = void 0;
 const DesignDocAction_1 = require("./DesignDocAction");
 exports.DesignDocTransitions = [
     {
+        from: '*',
+        action: DesignDocAction_1.DesignDocAction.Cancel,
+        to: "Cancelled" /* DesignDocState.Cancelled */,
+    },
+    {
         from: "Draft" /* DesignDocState.Draft */,
         action: DesignDocAction_1.DesignDocAction.Finalize,
         to: "FinalDraft" /* DesignDocState.FinalDraft */,

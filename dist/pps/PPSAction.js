@@ -13,6 +13,7 @@ var PPSAction;
     PPSAction["NotifyCustomerOfRejection"] = "NotifyCustomerOfRejection";
     PPSAction["ReviewReject"] = "ReviewReject";
     PPSAction["ReviewApproveWithChanges"] = "ReviewApproveWithChanges";
+    PPSAction["Cancel"] = "Cancel";
 })(PPSAction || (exports.PPSAction = PPSAction = {}));
 exports.PPSActionDisplayName = {
     [PPSAction.Organize]: '寄送整理',
@@ -25,4 +26,5 @@ exports.PPSActionDisplayName = {
     [PPSAction.NotifyCustomerOfRejection]: '通知客户未通过',
     [PPSAction.ReviewReject]: '审核未通过',
     [PPSAction.ReviewApproveWithChanges]: '审核通过（有修改）',
+    [PPSAction.Cancel]: '款式取消',
 };

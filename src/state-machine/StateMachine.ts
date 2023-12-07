@@ -2,7 +2,7 @@ import { STATE_MACHINE_STORE } from './token'
 import 'reflect-metadata'
 
 export interface TransitionParam<A extends string, S extends string> {
-  from: S
+  from: S | string
   action: A
   to: S
 }
@@ -37,6 +37,7 @@ export class StateMachine<
 > {
   private stateHasActions: Map<string, string[]> = new Map()
   private actionToStates: Map<string, string> = new Map()
+  private anyFromTransition: TransitionParam<any, any>
   private actionDict: Record<string, string>
   private stateDict: Record<string, string>
   public readonly name: string
@@ -63,7 +64,19 @@ export class StateMachine<
         throw new OneActionHasMultipleToStatesError(action, existingState, to)
       }
       this.actionToStates.set(key, to)
+
+      if (from === '*') {
+        this.anyFromTransition = transaction
+      }
     })
+
+    // handle from *
+    if (this.anyFromTransition) {
+      const { action, to } = this.anyFromTransition
+      this.stateHasActions.forEach((actions, from) => {
+        actions.push(action)
+      })
+    }
   }
 
   can(currentState?: State | null) {
@@ -93,9 +106,13 @@ export class StateMachine<
     if (!actions.includes(action)) {
       return null
     }
-    const tos = this.actionToStates.get(actionToStatesKey(currentState, action))
+    let tos = this.actionToStates.get(actionToStatesKey(currentState, action))
     if (!tos) {
-      return null
+      tos =  this.actionToStates.get(actionToStatesKey('*', action))
+    }
+
+    if(!tos) {
+        return null
     }
     this.setSubjectCurrentState(tos)
 
@@ -111,13 +128,13 @@ export class StateMachine<
       const { stateDict, actionDict } = this
       const stateDiagramElements = this.params.transitions.map(
         ({ from, to, action }) =>
-          `${stateDict[from]} --> ${stateDict[to]} : ${actionDict[action]}`,
+          `${stateDict[from]??"[*]"} --> ${stateDict[to]} : ${actionDict[action]}`,
       )
       return `stateDiagram-v2\n${stateDiagramElements.join('\n')}\n`
     }
 
     const stateDiagramElements = this.params.transitions.map(
-      ({ from, to, action }) => `${from} --> ${to} : ${action}`,
+      ({ from, to, action }) => `${from === "*" ? "[*]": from} --> ${to} : ${action}`,
     )
     return `stateDiagram-v2\n${stateDiagramElements.join('\n')}\n`
   }

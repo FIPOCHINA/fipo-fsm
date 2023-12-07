@@ -7,6 +7,11 @@ export const MarketingMaterialTransitions: TransitionParam<
     MarketingMaterialState
 >[] = [
     {
+        from: '*',
+        action: MarketingMaterialAction.Cancel,
+        to: MarketingMaterialState.Cancelled
+    },
+    {
         from: MarketingMaterialState.Draft,
         action: MarketingMaterialAction.Finalize,
         to: MarketingMaterialState.Finalized

@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 export interface TransitionParam<A extends string, S extends string> {
-    from: S;
+    from: S | string;
     action: A;
     to: S;
 }
@@ -18,6 +18,7 @@ export declare class StateMachine<T extends object | null, Action extends string
     subject?: T | undefined;
     private stateHasActions;
     private actionToStates;
+    private anyFromTransition;
     private actionDict;
     private stateDict;
     readonly name: string;

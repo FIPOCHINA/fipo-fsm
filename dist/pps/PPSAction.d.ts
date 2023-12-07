@@ -8,7 +8,8 @@ export declare enum PPSAction {
     NotifyCustomerOfChanges = "NotifyCustomerOfChanges",
     NotifyCustomerOfRejection = "NotifyCustomerOfRejection",
     ReviewReject = "ReviewReject",
-    ReviewApproveWithChanges = "ReviewApproveWithChanges"
+    ReviewApproveWithChanges = "ReviewApproveWithChanges",
+    Cancel = "Cancel"
 }
 export declare const PPSActionDisplayName: Record<PPSAction, string>;
 //# sourceMappingURL=PPSAction.d.ts.map

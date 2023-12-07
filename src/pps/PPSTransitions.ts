@@ -7,6 +7,11 @@ export const PPSTransitions: TransitionParam<
     PPSState
 >[] = [
     {
+        from: '*',
+        action: PPSAction.Cancel,
+        to: PPSState.Cancelled
+    },
+    {
         from: PPSState.WaitingForPPS,
         action: PPSAction.Organize,
         to: PPSState.OrganizedForSending
