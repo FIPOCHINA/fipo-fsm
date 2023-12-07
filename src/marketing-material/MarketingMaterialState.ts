@@ -1,6 +1,6 @@
 import {MarketingMaterialAction} from "./MarketingMaterialAction";
 
-export const enum MarketingMaterialState {
+export enum MarketingMaterialState {
   Draft = 'Draft',
   Finalized = 'Finalized',
   InReview = 'InReview',
