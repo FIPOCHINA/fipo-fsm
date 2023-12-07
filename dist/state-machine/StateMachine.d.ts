@@ -23,9 +23,9 @@ export declare class StateMachine<T extends object | null, Action extends string
     private stateDict;
     readonly name: string;
     constructor(params: StateMachineGraph<Action, State>, subject?: T | undefined);
-    can(currentState?: State | null): string[];
-    apply(action: Action): string | null;
-    next(currentState: State, action: Action): string | null;
+    can(currentState?: State | null): Action[];
+    apply(action: Action): State | null;
+    next(currentState: State, action: Action): State | null;
     state(): State | null;
     visualize(showDisplayName?: boolean): string;
     private getSubjectKey;

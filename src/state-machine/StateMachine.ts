@@ -35,8 +35,8 @@ export class StateMachine<
   Action extends string,
   State extends string,
 > {
-  private stateHasActions: Map<string, string[]> = new Map()
-  private actionToStates: Map<string, string> = new Map()
+  private stateHasActions: Map<string, Action[]> = new Map()
+  private actionToStates: Map<string, State> = new Map()
   private anyFromTransition: TransitionParam<any, any>
   private actionDict: Record<string, string>
   private stateDict: Record<string, string>
@@ -79,7 +79,7 @@ export class StateMachine<
     }
   }
 
-  can(currentState?: State | null) {
+  can(currentState?: State | null): Action[] {
     if (!currentState) {
       currentState = this.state()
     }
@@ -90,7 +90,7 @@ export class StateMachine<
     return actions || []
   }
 
-  apply(action: Action) {
+  apply(action: Action): State|null {
     const state = this.state()
     if (!state) {
       return null
@@ -98,7 +98,7 @@ export class StateMachine<
     return this.next(state, action)
   }
 
-  next(currentState: State, action: Action) {
+  next(currentState: State, action: Action): State|null {
     const actions = this.stateHasActions.get(currentState)
     if (!actions) {
       return null
