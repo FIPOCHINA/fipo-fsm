@@ -1,4 +1,4 @@
-export const enum DesignDocState {
+export enum DesignDocState {
   Draft = 'Draft',
   FinalDraft = 'FinalDraft',
   InReview = 'InReview',
