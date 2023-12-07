@@ -1,4 +1,4 @@
-import {ProductSampleStateDisplayName, ProductSampleState} from './ProductSampleState'
+import {ProductSampleState} from './ProductSampleState'
 import {TransitionParam} from '../state-machine'
 import {ProductSampleAction} from "./ProductSampleAction";
 

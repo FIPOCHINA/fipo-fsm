@@ -1,4 +1,4 @@
-import { STATE_MACHINE_STORE } from './token'
+import {STATE_MACHINE_STORE} from './token'
 import 'reflect-metadata'
 
 export interface TransitionParam<A extends string, S extends string> {

@@ -1,71 +1,72 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DesignDocTransitions = void 0;
+const DesignDocState_1 = require("./DesignDocState");
 const DesignDocAction_1 = require("./DesignDocAction");
 exports.DesignDocTransitions = [
     {
         from: '*',
         action: DesignDocAction_1.DesignDocAction.Cancel,
-        to: "Cancelled" /* DesignDocState.Cancelled */,
+        to: DesignDocState_1.DesignDocState.Cancelled,
     },
     {
-        from: "Draft" /* DesignDocState.Draft */,
+        from: DesignDocState_1.DesignDocState.Draft,
         action: DesignDocAction_1.DesignDocAction.Finalize,
-        to: "FinalDraft" /* DesignDocState.FinalDraft */,
+        to: DesignDocState_1.DesignDocState.FinalDraft,
     },
     {
-        from: "FinalDraft" /* DesignDocState.FinalDraft */,
+        from: DesignDocState_1.DesignDocState.FinalDraft,
         action: DesignDocAction_1.DesignDocAction.SendForReview,
-        to: "InReview" /* DesignDocState.InReview */,
+        to: DesignDocState_1.DesignDocState.InReview,
     },
     {
-        from: "InReview" /* DesignDocState.InReview */,
+        from: DesignDocState_1.DesignDocState.InReview,
         action: DesignDocAction_1.DesignDocAction.ReviewApprove,
-        to: "ReviewApproved" /* DesignDocState.ReviewApproved */,
+        to: DesignDocState_1.DesignDocState.ReviewApproved,
     },
     {
-        from: "InReview" /* DesignDocState.InReview */,
+        from: DesignDocState_1.DesignDocState.InReview,
         action: DesignDocAction_1.DesignDocAction.ReviewReject,
-        to: "ReviewRejected" /* DesignDocState.ReviewRejected */,
+        to: DesignDocState_1.DesignDocState.ReviewRejected,
     },
     {
-        from: "InReview" /* DesignDocState.InReview */,
+        from: DesignDocState_1.DesignDocState.InReview,
         action: DesignDocAction_1.DesignDocAction.ReviewApproveWithChanges,
-        to: "ApprovedWithChanges" /* DesignDocState.ApprovedWithChanges */,
+        to: DesignDocState_1.DesignDocState.ApprovedWithChanges,
     },
     {
-        from: "ReviewApproved" /* DesignDocState.ReviewApproved */,
+        from: DesignDocState_1.DesignDocState.ReviewApproved,
         action: DesignDocAction_1.DesignDocAction.NotifyCustomer,
-        to: "CustomerNotified" /* DesignDocState.CustomerNotified */,
+        to: DesignDocState_1.DesignDocState.CustomerNotified,
     },
     {
-        from: "ReviewRejected" /* DesignDocState.ReviewRejected */,
+        from: DesignDocState_1.DesignDocState.ReviewRejected,
         action: DesignDocAction_1.DesignDocAction.NotifyCustomerOfRejection,
-        to: "CustomerModifyingForRejection" /* DesignDocState.CustomerModifyingForRejection */,
+        to: DesignDocState_1.DesignDocState.CustomerModifyingForRejection,
     },
     {
-        from: "CustomerModifyingForRejection" /* DesignDocState.CustomerModifyingForRejection */,
+        from: DesignDocState_1.DesignDocState.CustomerModifyingForRejection,
         action: DesignDocAction_1.DesignDocAction.Finalize,
-        to: "FinalDraft" /* DesignDocState.FinalDraft */,
+        to: DesignDocState_1.DesignDocState.FinalDraft,
     },
     {
-        from: "ApprovedWithChanges" /* DesignDocState.ApprovedWithChanges */,
+        from: DesignDocState_1.DesignDocState.ApprovedWithChanges,
         action: DesignDocAction_1.DesignDocAction.NotifyCustomerOfChanges,
-        to: "CustomerModifyingForChanges" /* DesignDocState.CustomerModifyingForChanges */,
+        to: DesignDocState_1.DesignDocState.CustomerModifyingForChanges,
     },
     {
-        from: "CustomerModifyingForChanges" /* DesignDocState.CustomerModifyingForChanges */,
+        from: DesignDocState_1.DesignDocState.CustomerModifyingForChanges,
         action: DesignDocAction_1.DesignDocAction.NotifyCustomer,
-        to: "CustomerNotified" /* DesignDocState.CustomerNotified */,
+        to: DesignDocState_1.DesignDocState.CustomerNotified,
     },
     {
-        from: "ReviewApprovedWithChanges" /* DesignDocState.ReviewApprovedWithChanges */,
+        from: DesignDocState_1.DesignDocState.ReviewApprovedWithChanges,
         action: DesignDocAction_1.DesignDocAction.InHouseChanged,
-        to: "InHouseChanged" /* DesignDocState.InHouseChanged */,
+        to: DesignDocState_1.DesignDocState.InHouseChanged,
     },
     {
-        from: "InHouseChanged" /* DesignDocState.InHouseChanged */,
+        from: DesignDocState_1.DesignDocState.InHouseChanged,
         action: DesignDocAction_1.DesignDocAction.NotifyCustomer,
-        to: "CustomerNotified" /* DesignDocState.CustomerNotified */,
+        to: DesignDocState_1.DesignDocState.CustomerNotified,
     },
 ];

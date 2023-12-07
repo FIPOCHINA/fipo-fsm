@@ -1,5 +1,3 @@
-import {MarketingMaterialAction} from "./MarketingMaterialAction";
-
 export enum MarketingMaterialState {
   Draft = 'Draft',
   Finalized = 'Finalized',

@@ -1,61 +1,62 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PPSTransitions = void 0;
+const PPSState_1 = require("./PPSState");
 const PPSAction_1 = require("./PPSAction");
 exports.PPSTransitions = [
     {
         from: '*',
         action: PPSAction_1.PPSAction.Cancel,
-        to: "Cancelled" /* PPSState.Cancelled */
+        to: PPSState_1.PPSState.Cancelled
     },
     {
-        from: "WaitingForPPS" /* PPSState.WaitingForPPS */,
+        from: PPSState_1.PPSState.WaitingForPPS,
         action: PPSAction_1.PPSAction.Organize,
-        to: "OrganizedForSending" /* PPSState.OrganizedForSending */
+        to: PPSState_1.PPSState.OrganizedForSending
     },
     {
-        from: "OrganizedForSending" /* PPSState.OrganizedForSending */,
+        from: PPSState_1.PPSState.OrganizedForSending,
         action: PPSAction_1.PPSAction.InternalReviewApprove,
-        to: "InternalReviewed" /* PPSState.InternalReviewed */
+        to: PPSState_1.PPSState.InternalReviewed
     },
     {
-        from: "InternalReviewed" /* PPSState.InternalReviewed */,
+        from: PPSState_1.PPSState.InternalReviewed,
         action: PPSAction_1.PPSAction.SendForReview,
-        to: "InReview" /* PPSState.InReview */
+        to: PPSState_1.PPSState.InReview
     },
     {
-        from: "InReview" /* PPSState.InReview */,
+        from: PPSState_1.PPSState.InReview,
         action: PPSAction_1.PPSAction.ReviewApprove,
-        to: "ReviewApproved" /* PPSState.ReviewApproved */
+        to: PPSState_1.PPSState.ReviewApproved
     },
     {
-        from: "InReview" /* PPSState.InReview */,
+        from: PPSState_1.PPSState.InReview,
         action: PPSAction_1.PPSAction.ReviewReject,
-        to: "ReviewRejected" /* PPSState.ReviewRejected */
+        to: PPSState_1.PPSState.ReviewRejected
     },
     {
-        from: "InReview" /* PPSState.InReview */,
+        from: PPSState_1.PPSState.InReview,
         action: PPSAction_1.PPSAction.ReviewApproveWithChanges,
-        to: "ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */
+        to: PPSState_1.PPSState.ReviewApprovedWithChanges
     },
     {
-        from: "ReviewApproved" /* PPSState.ReviewApproved */,
+        from: PPSState_1.PPSState.ReviewApproved,
         action: PPSAction_1.PPSAction.NotifyCustomer,
-        to: "CustomerNotified" /* PPSState.CustomerNotified */
+        to: PPSState_1.PPSState.CustomerNotified
     },
     {
-        from: "ReviewRejected" /* PPSState.ReviewRejected */,
+        from: PPSState_1.PPSState.ReviewRejected,
         action: PPSAction_1.PPSAction.NotifyCustomerOfRejection,
-        to: "CustomerModifyingForRejection" /* PPSState.CustomerModifyingForRejection */
+        to: PPSState_1.PPSState.CustomerModifyingForRejection
     },
     {
-        from: "CustomerModifyingForRejection" /* PPSState.CustomerModifyingForRejection */,
+        from: PPSState_1.PPSState.CustomerModifyingForRejection,
         action: PPSAction_1.PPSAction.Organize,
-        to: "OrganizedForSending" /* PPSState.OrganizedForSending */
+        to: PPSState_1.PPSState.OrganizedForSending
     },
     {
-        from: "ReviewApprovedWithChanges" /* PPSState.ReviewApprovedWithChanges */,
+        from: PPSState_1.PPSState.ReviewApprovedWithChanges,
         action: PPSAction_1.PPSAction.NotifyCustomerOfChanges,
-        to: "CustomerNotified" /* PPSState.CustomerNotified */
+        to: PPSState_1.PPSState.CustomerNotified
     }
 ];

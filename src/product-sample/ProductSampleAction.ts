@@ -1,5 +1,3 @@
-import {ProductSampleStateDisplayName} from "./ProductSampleState";
-
 export enum ProductSampleAction {
   Organize = 'Organize',
   SendForReview = 'SendForReview',
