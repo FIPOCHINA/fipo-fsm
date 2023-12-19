@@ -4,11 +4,11 @@ Draft --> FinalDraft : Finalize
 FinalDraft --> InReview : SendForReview
 InReview --> ReviewApproved : ReviewApprove
 InReview --> ReviewRejected : ReviewReject
-InReview --> ApprovedWithChanges : ReviewApproveWithChanges
+InReview --> ReviewApprovedWithChanges : ReviewApproveWithChanges
 ReviewApproved --> CustomerNotified : NotifyCustomer
 ReviewRejected --> CustomerModifyingForRejection : NotifyCustomerOfRejection
 CustomerModifyingForRejection --> FinalDraft : Finalize
-ApprovedWithChanges --> CustomerModifyingForChanges : NotifyCustomerOfChanges
+ReviewApprovedWithChanges --> CustomerModifyingForChanges : NotifyCustomerOfChanges
 CustomerModifyingForChanges --> CustomerNotified : NotifyCustomer
 ReviewApprovedWithChanges --> InHouseChanged : InHouseChanged
 InHouseChanged --> CustomerNotified : NotifyCustomer

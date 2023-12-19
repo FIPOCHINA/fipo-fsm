@@ -34,7 +34,7 @@ export const DesignDocTransitions: TransitionParam<
   {
     from: DesignDocState.InReview,
     action: DesignDocAction.ReviewApproveWithChanges,
-    to: DesignDocState.ApprovedWithChanges,
+    to: DesignDocState.ReviewApprovedWithChanges,
   },
   {
     from: DesignDocState.ReviewApproved,
@@ -52,7 +52,7 @@ export const DesignDocTransitions: TransitionParam<
     to: DesignDocState.FinalDraft,
   },
   {
-    from: DesignDocState.ApprovedWithChanges,
+    from: DesignDocState.ReviewApprovedWithChanges,
     action: DesignDocAction.NotifyCustomerOfChanges,
     to: DesignDocState.CustomerModifyingForChanges,
   },
