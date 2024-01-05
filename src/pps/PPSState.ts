@@ -1,4 +1,5 @@
 export enum PPSState {
+  WaitingForDesignDoc = 'WaitingForDesignDoc',
   WaitingForPPS = 'WaitingForPPS',
   OrganizedForSending = 'OrganizedForSending',
   InternalReviewed = 'InternalReviewed',
@@ -13,6 +14,7 @@ export enum PPSState {
 }
 
 export const PPSStateDisplayName: Record<PPSState, string> = {
+  [PPSState.WaitingForDesignDoc]: '等待设计稿完成',
   [PPSState.WaitingForPPS]: '等待产前样',
   [PPSState.OrganizedForSending]: '寄送整理已完成',
   [PPSState.InReview]: '正式审核中',

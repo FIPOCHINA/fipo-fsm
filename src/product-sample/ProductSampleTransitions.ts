@@ -7,6 +7,11 @@ export const ProductSampleTransitions: TransitionParam<
     ProductSampleState
 >[] = [
     {
+        from: ProductSampleState.WaitingForPSS,
+        action: ProductSampleAction.PPSDone,
+        to: ProductSampleState.WaitingForPS
+    },
+    {
         from: ProductSampleState.WaitingForPS,
         action: ProductSampleAction.Organize,
         to: ProductSampleState.OrganizedForSending

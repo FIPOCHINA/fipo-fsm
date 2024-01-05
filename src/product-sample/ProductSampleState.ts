@@ -1,4 +1,5 @@
 export enum ProductSampleState {
+  WaitingForPSS = 'WaitingForPSS',
   WaitingForPS = 'WaitingForPS',
   OrganizedForSending = 'OrganizedForSending',
   InReview = 'InReview',
@@ -10,6 +11,7 @@ export enum ProductSampleState {
 }
 
 export const ProductSampleStateDisplayName: Record<ProductSampleState, string> = {
+  [ProductSampleState.WaitingForPSS]: '等待产前样完成',
   [ProductSampleState.WaitingForPS]: '等待大货样',
   [ProductSampleState.OrganizedForSending]: '寄送整理已完成',
   [ProductSampleState.InReview]: '正式审核中',

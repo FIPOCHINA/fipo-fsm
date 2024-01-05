@@ -12,6 +12,11 @@ export const PPSTransitions: TransitionParam<
         to: PPSState.Cancelled
     },
     {
+        from: PPSState.WaitingForDesignDoc,
+        action: PPSAction.DesignDocDone,
+        to: PPSState.WaitingForPPS
+    },
+    {
         from: PPSState.WaitingForPPS,
         action: PPSAction.Organize,
         to: PPSState.OrganizedForSending

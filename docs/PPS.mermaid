@@ -1,5 +1,6 @@
 stateDiagram-v2
 [*] --> Cancelled : Cancel
+WaitingForDesignDoc --> WaitingForPPS : DesignDocDone
 WaitingForPPS --> OrganizedForSending : Organize
 OrganizedForSending --> InternalReviewed : InternalReviewApprove
 InternalReviewed --> InReview : SendForReview
