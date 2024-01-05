@@ -1,4 +1,5 @@
 export enum PPSAction {
+    DesignDocDone = 'DesignDocDone',
     Organize = 'Organize',
     InternalReviewRejected = 'InternalReviewRejected',
     InternalReviewApprove = 'InternalReviewApprove',
@@ -13,6 +14,7 @@ export enum PPSAction {
 }
 
 export const PPSActionDisplayName: Record<PPSAction, string> = {
+    [PPSAction.DesignDocDone]: '设计稿已完成',
     [PPSAction.Organize]: '寄送整理',
     [PPSAction.InternalReviewRejected]: '预审不通过',
     [PPSAction.InternalReviewApprove]: '预审通过',
