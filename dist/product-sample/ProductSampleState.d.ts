@@ -1,4 +1,5 @@
 export declare enum ProductSampleState {
+    WaitingForPSS = "WaitingForPSS",
     WaitingForPS = "WaitingForPS",
     OrganizedForSending = "OrganizedForSending",
     InReview = "InReview",

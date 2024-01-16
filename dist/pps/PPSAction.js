@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PPSActionDisplayName = exports.PPSAction = void 0;
 var PPSAction;
 (function (PPSAction) {
+    PPSAction["DesignDocDone"] = "DesignDocDone";
     PPSAction["Organize"] = "Organize";
     PPSAction["InternalReviewRejected"] = "InternalReviewRejected";
     PPSAction["InternalReviewApprove"] = "InternalReviewApprove";
@@ -16,6 +17,7 @@ var PPSAction;
     PPSAction["Cancel"] = "Cancel";
 })(PPSAction || (exports.PPSAction = PPSAction = {}));
 exports.PPSActionDisplayName = {
+    [PPSAction.DesignDocDone]: '设计稿已完成',
     [PPSAction.Organize]: '寄送整理',
     [PPSAction.InternalReviewRejected]: '预审不通过',
     [PPSAction.InternalReviewApprove]: '预审通过',

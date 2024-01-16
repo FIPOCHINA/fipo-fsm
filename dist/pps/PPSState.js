@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PPSStateDisplayName = exports.PPSState = void 0;
 var PPSState;
 (function (PPSState) {
+    PPSState["WaitingForDesignDoc"] = "WaitingForDesignDoc";
     PPSState["WaitingForPPS"] = "WaitingForPPS";
     PPSState["OrganizedForSending"] = "OrganizedForSending";
     PPSState["InternalReviewed"] = "InternalReviewed";
@@ -16,6 +17,7 @@ var PPSState;
     PPSState["ApprovedWithChanges"] = "ApprovedWithChanges";
 })(PPSState || (exports.PPSState = PPSState = {}));
 exports.PPSStateDisplayName = {
+    [PPSState.WaitingForDesignDoc]: '等待设计稿完成',
     [PPSState.WaitingForPPS]: '等待产前样',
     [PPSState.OrganizedForSending]: '寄送整理已完成',
     [PPSState.InReview]: '正式审核中',

@@ -1,4 +1,5 @@
 export declare enum ProductSampleAction {
+    PPSDone = "PPSDone",
     Organize = "Organize",
     SendForReview = "SendForReview",
     ReviewApprove = "ReviewApprove",

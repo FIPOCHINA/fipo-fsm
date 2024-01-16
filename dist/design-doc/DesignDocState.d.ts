@@ -9,7 +9,6 @@ export declare enum DesignDocState {
     ReviewApprovedWithChanges = "ReviewApprovedWithChanges",
     CustomerModifyingForRejection = "CustomerModifyingForRejection",
     CustomerModifyingForChanges = "CustomerModifyingForChanges",
-    ApprovedWithChanges = "ApprovedWithChanges",
     InHouseChanged = "InHouseChanged"
 }
 export declare const DesignDocStateDisplayName: Record<DesignDocState, string>;

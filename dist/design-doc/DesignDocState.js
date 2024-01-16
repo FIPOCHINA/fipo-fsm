@@ -13,7 +13,6 @@ var DesignDocState;
     DesignDocState["ReviewApprovedWithChanges"] = "ReviewApprovedWithChanges";
     DesignDocState["CustomerModifyingForRejection"] = "CustomerModifyingForRejection";
     DesignDocState["CustomerModifyingForChanges"] = "CustomerModifyingForChanges";
-    DesignDocState["ApprovedWithChanges"] = "ApprovedWithChanges";
     DesignDocState["InHouseChanged"] = "InHouseChanged";
 })(DesignDocState || (exports.DesignDocState = DesignDocState = {}));
 exports.DesignDocStateDisplayName = {
@@ -27,6 +26,5 @@ exports.DesignDocStateDisplayName = {
     [DesignDocState.ReviewApprovedWithChanges]: '审核通过（有修改）',
     [DesignDocState.CustomerModifyingForRejection]: '客户修改中（驳回）',
     [DesignDocState.CustomerModifyingForChanges]: '客户修改中（有修改）',
-    [DesignDocState.ApprovedWithChanges]: '审核通过（有修改）',
     [DesignDocState.InHouseChanged]: '内部修改完成',
 };

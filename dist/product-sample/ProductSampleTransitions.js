@@ -5,6 +5,11 @@ const ProductSampleState_1 = require("./ProductSampleState");
 const ProductSampleAction_1 = require("./ProductSampleAction");
 exports.ProductSampleTransitions = [
     {
+        from: ProductSampleState_1.ProductSampleState.WaitingForPSS,
+        action: ProductSampleAction_1.ProductSampleAction.PPSDone,
+        to: ProductSampleState_1.ProductSampleState.WaitingForPS
+    },
+    {
         from: ProductSampleState_1.ProductSampleState.WaitingForPS,
         action: ProductSampleAction_1.ProductSampleAction.Organize,
         to: ProductSampleState_1.ProductSampleState.OrganizedForSending

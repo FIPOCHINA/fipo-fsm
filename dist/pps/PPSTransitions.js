@@ -10,6 +10,11 @@ exports.PPSTransitions = [
         to: PPSState_1.PPSState.Cancelled
     },
     {
+        from: PPSState_1.PPSState.WaitingForDesignDoc,
+        action: PPSAction_1.PPSAction.DesignDocDone,
+        to: PPSState_1.PPSState.WaitingForPPS
+    },
+    {
         from: PPSState_1.PPSState.WaitingForPPS,
         action: PPSAction_1.PPSAction.Organize,
         to: PPSState_1.PPSState.OrganizedForSending

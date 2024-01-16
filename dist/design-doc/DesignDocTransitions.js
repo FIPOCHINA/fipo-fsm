@@ -32,7 +32,7 @@ exports.DesignDocTransitions = [
     {
         from: DesignDocState_1.DesignDocState.InReview,
         action: DesignDocAction_1.DesignDocAction.ReviewApproveWithChanges,
-        to: DesignDocState_1.DesignDocState.ApprovedWithChanges,
+        to: DesignDocState_1.DesignDocState.ReviewApprovedWithChanges,
     },
     {
         from: DesignDocState_1.DesignDocState.ReviewApproved,
@@ -50,7 +50,7 @@ exports.DesignDocTransitions = [
         to: DesignDocState_1.DesignDocState.FinalDraft,
     },
     {
-        from: DesignDocState_1.DesignDocState.ApprovedWithChanges,
+        from: DesignDocState_1.DesignDocState.ReviewApprovedWithChanges,
         action: DesignDocAction_1.DesignDocAction.NotifyCustomerOfChanges,
         to: DesignDocState_1.DesignDocState.CustomerModifyingForChanges,
     },

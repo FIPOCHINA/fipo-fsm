@@ -1,4 +1,5 @@
 export declare enum PPSAction {
+    DesignDocDone = "DesignDocDone",
     Organize = "Organize",
     InternalReviewRejected = "InternalReviewRejected",
     InternalReviewApprove = "InternalReviewApprove",

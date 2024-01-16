@@ -1,4 +1,5 @@
 export declare enum PPSState {
+    WaitingForDesignDoc = "WaitingForDesignDoc",
     WaitingForPPS = "WaitingForPPS",
     OrganizedForSending = "OrganizedForSending",
     InternalReviewed = "InternalReviewed",
