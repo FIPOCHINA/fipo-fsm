@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductSampleStateDisplayName = exports.ProductSampleState = void 0;
 var ProductSampleState;
 (function (ProductSampleState) {
-    ProductSampleState["WaitingForPSS"] = "WaitingForPSS";
+    ProductSampleState["WaitingForPPS"] = "WaitingForPPS";
     ProductSampleState["WaitingForPS"] = "WaitingForPS";
     ProductSampleState["OrganizedForSending"] = "OrganizedForSending";
     ProductSampleState["InReview"] = "InReview";
@@ -14,7 +14,7 @@ var ProductSampleState;
     ProductSampleState["CustomerModifyingForRejection"] = "CustomerModifyingForRejection";
 })(ProductSampleState || (exports.ProductSampleState = ProductSampleState = {}));
 exports.ProductSampleStateDisplayName = {
-    [ProductSampleState.WaitingForPSS]: '等待产前样完成',
+    [ProductSampleState.WaitingForPPS]: '等待产前样完成',
     [ProductSampleState.WaitingForPS]: '等待大货样',
     [ProductSampleState.OrganizedForSending]: '寄送整理已完成',
     [ProductSampleState.InReview]: '正式审核中',

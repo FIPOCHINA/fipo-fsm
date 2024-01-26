@@ -5,7 +5,7 @@ const ProductSampleState_1 = require("./ProductSampleState");
 const ProductSampleAction_1 = require("./ProductSampleAction");
 exports.ProductSampleTransitions = [
     {
-        from: ProductSampleState_1.ProductSampleState.WaitingForPSS,
+        from: ProductSampleState_1.ProductSampleState.WaitingForPPS,
         action: ProductSampleAction_1.ProductSampleAction.PPSDone,
         to: ProductSampleState_1.ProductSampleState.WaitingForPS
     },
