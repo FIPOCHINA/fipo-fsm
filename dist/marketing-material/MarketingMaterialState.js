@@ -17,7 +17,7 @@ exports.MarketingMaterialStateDisplayName = {
     [MarketingMaterialState.Finalized]: '定稿',
     [MarketingMaterialState.InReview]: '正式审核中',
     [MarketingMaterialState.CustomerNotified]: '已通知客户',
-    [MarketingMaterialState.Cancelled]: '款式取消',
+    [MarketingMaterialState.Cancelled]: '物料弃用',
     [MarketingMaterialState.ReviewRejected]: '审核未通过',
     [MarketingMaterialState.CustomerModifyingForRejection]: '客户修改中',
     [MarketingMaterialState.ReviewApproved]: '审核通过',
