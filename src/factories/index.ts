@@ -19,6 +19,7 @@ import {
     MarketingMaterialState,
     MarketingMaterialStateDisplayName, MarketingMaterialTransitions
 } from "../marketing-material";
+import {ACLAction, ACLActionDisplayName, ACLState, ACLStateDisplayName, ACLTransitions} from "../acl";
 
 export const DesignDocStateMachineFactory = <T extends object | null>(
     subject: T,
@@ -70,6 +71,20 @@ export const MarketingMaterialStateMachineFactory = <T extends object | null>(
             transitions: MarketingMaterialTransitions,
             actionDict: MarketingMaterialActionDisplayName,
             stateDict: MarketingMaterialStateDisplayName,
+        },
+        subject,
+    )
+}
+
+export const ACLStateMachineFactory = <T extends object | null>(
+    subject: T,
+) => {
+    return new StateMachine<T, ACLAction, ACLState>(
+        {
+            name: 'ACL',
+            transitions: ACLTransitions,
+            actionDict: ACLActionDisplayName,
+            stateDict: ACLStateDisplayName,
         },
         subject,
     )

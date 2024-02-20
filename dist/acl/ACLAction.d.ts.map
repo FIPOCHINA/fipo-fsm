@@ -1,0 +1,1 @@
+{"version":3,"file":"ACLAction.d.ts","sourceRoot":"","sources":["../../src/acl/ACLAction.ts"],"names":[],"mappings":"AAAA,oBAAY,SAAS;IACjB,mBAAmB,wBAAwB;IAC3C,iBAAiB,sBAAsB;IACvC,kBAAkB,uBAAuB;IACzC,gBAAgB,qBAAqB;IACrC,cAAc,mBAAmB;IACjC,kBAAkB,uBAAuB;IACzC,mBAAmB,wBAAwB;IAC3C,YAAY,iBAAiB;IAC7B,cAAc,mBAAmB;CACpC;AAED,eAAO,MAAM,oBAAoB,EAAE,MAAM,CAAC,SAAS,EAAE,MAAM,CAY1D,CAAA"}

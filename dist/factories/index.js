@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MarketingMaterialStateMachineFactory = exports.ProductSampleStateMachineFactory = exports.PPSStateMachineFactory = exports.DesignDocStateMachineFactory = void 0;
+exports.ACLStateMachineFactory = exports.MarketingMaterialStateMachineFactory = exports.ProductSampleStateMachineFactory = exports.PPSStateMachineFactory = exports.DesignDocStateMachineFactory = void 0;
 const state_machine_1 = require("../state-machine");
 const design_doc_1 = require("../design-doc");
 const pps_1 = require("../pps");
 const product_sample_1 = require("../product-sample");
 const marketing_material_1 = require("../marketing-material");
+const acl_1 = require("../acl");
 const DesignDocStateMachineFactory = (subject) => {
     return new state_machine_1.StateMachine({
         name: 'DesignDoc',
@@ -42,3 +43,12 @@ const MarketingMaterialStateMachineFactory = (subject) => {
     }, subject);
 };
 exports.MarketingMaterialStateMachineFactory = MarketingMaterialStateMachineFactory;
+const ACLStateMachineFactory = (subject) => {
+    return new state_machine_1.StateMachine({
+        name: 'ACL',
+        transitions: acl_1.ACLTransitions,
+        actionDict: acl_1.ACLActionDisplayName,
+        stateDict: acl_1.ACLStateDisplayName,
+    }, subject);
+};
+exports.ACLStateMachineFactory = ACLStateMachineFactory;

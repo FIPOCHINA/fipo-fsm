@@ -1,4 +1,5 @@
 stateDiagram-v2
+WaitingForPPS --> WaitingForPS : PPSDone
 WaitingForPS --> OrganizedForSending : Organize
 OrganizedForSending --> InReview : SendForReview
 InReview --> ReviewApproved : ReviewApprove

@@ -1,0 +1,10 @@
+stateDiagram-v2
+WaitingBrandReview --> BrandReviewRejected : BrandReviewReject
+BrandReviewRejected --> WaitingBrandReview : ResubmitBrandReview
+WaitingBrandReview --> WaitingFinancialReview : BrandReviewApprove
+WaitingFinancialReview --> WaitingPurchase : MarkAsPurchasing
+WaitingPurchase --> InInventory : BookingInInventory
+InInventory --> WaitingTaking : BookingOutInventory
+WaitingTaking --> Taken : ConfirmTaken
+Taken --> MailedToCustomer : MailToCustomer
+WaitingFinancialReview --> WaitingTaking : ConfirmRelease
