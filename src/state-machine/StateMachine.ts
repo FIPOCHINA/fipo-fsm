@@ -37,7 +37,7 @@ export class StateMachine<
 > {
   private stateHasActions: Map<string, Action[]> = new Map()
   private actionToStates: Map<string, State> = new Map()
-  private anyFromTransition: TransitionParam<any, any>
+  private anyFromTransition?: TransitionParam<any, any>
   private actionDict: Record<string, string>
   private stateDict: Record<string, string>
   public readonly name: string
@@ -71,7 +71,7 @@ export class StateMachine<
     })
 
     // handle from *
-    if (this.anyFromTransition) {
+    if (this.anyFromTransition != null) {
       const { action, to } = this.anyFromTransition
       this.stateHasActions.forEach((actions, from) => {
         actions.push(action)
