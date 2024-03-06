@@ -73,9 +73,17 @@ export class StateMachine<
     // handle from *
     if (this.anyFromTransition != null) {
       const { action, to } = this.anyFromTransition
-      this.stateHasActions.forEach((actions, from) => {
+      for (const key in params.stateDict){
+        const actions = this.stateHasActions.get(key) || []
+        if (actions.includes(action)) {
+          continue
+        }
         actions.push(action)
-      })
+        this.stateHasActions.set(key, actions)
+      }
+      // this.stateHasActions.forEach((actions, from) => {
+      //   actions.push(action)
+      // })
     }
   }
 

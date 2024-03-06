@@ -23,6 +23,16 @@ describe('design doc', () => {
             'Cancel'
         ])
     })
+
+    it('cancel', () => {
+        doc.state = DesignDocState.CustomerNotified
+        const t = DesignDocStateMachineFactory<MockDesignDoc>(doc)
+
+        expect(t.can()).toStrictEqual([
+
+            'Cancel'
+        ])
+    })
     it('frontend', () => {
         const t = DesignDocStateMachineFactory(null)
 
