@@ -10,7 +10,6 @@ export enum PPSState {
   ReviewRejected = 'ReviewRejected',
   ReviewApprovedWithChanges = 'ReviewApprovedWithChanges',
   CustomerModifyingForRejection = 'CustomerModifyingForRejection',
-  ApprovedWithChanges = 'ApprovedWithChanges',
 }
 
 export const PPSStateDisplayName: Record<PPSState, string> = {
@@ -25,5 +24,4 @@ export const PPSStateDisplayName: Record<PPSState, string> = {
   [PPSState.ReviewRejected]: '审核未通过',
   [PPSState.ReviewApprovedWithChanges]: '审核通过（有修改）',
   [PPSState.CustomerModifyingForRejection]: '客户修改中',
-  [PPSState.ApprovedWithChanges]: '审核通过（有修改）',
 }
