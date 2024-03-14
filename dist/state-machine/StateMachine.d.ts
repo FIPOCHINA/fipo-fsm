@@ -18,7 +18,7 @@ export declare class StateMachine<T extends object | null, Action extends string
     subject?: T | undefined;
     private stateHasActions;
     private actionToStates;
-    private anyFromTransition;
+    private anyFromTransition?;
     private actionDict;
     private stateDict;
     readonly name: string;

@@ -9,8 +9,7 @@ export declare enum PPSState {
     Cancelled = "Cancelled",
     ReviewRejected = "ReviewRejected",
     ReviewApprovedWithChanges = "ReviewApprovedWithChanges",
-    CustomerModifyingForRejection = "CustomerModifyingForRejection",
-    ApprovedWithChanges = "ApprovedWithChanges"
+    CustomerModifyingForRejection = "CustomerModifyingForRejection"
 }
 export declare const PPSStateDisplayName: Record<PPSState, string>;
 //# sourceMappingURL=PPSState.d.ts.map

@@ -14,7 +14,6 @@ var PPSState;
     PPSState["ReviewRejected"] = "ReviewRejected";
     PPSState["ReviewApprovedWithChanges"] = "ReviewApprovedWithChanges";
     PPSState["CustomerModifyingForRejection"] = "CustomerModifyingForRejection";
-    PPSState["ApprovedWithChanges"] = "ApprovedWithChanges";
 })(PPSState || (exports.PPSState = PPSState = {}));
 exports.PPSStateDisplayName = {
     [PPSState.WaitingForDesignDoc]: '等待设计稿完成',
@@ -28,5 +27,4 @@ exports.PPSStateDisplayName = {
     [PPSState.ReviewRejected]: '审核未通过',
     [PPSState.ReviewApprovedWithChanges]: '审核通过（有修改）',
     [PPSState.CustomerModifyingForRejection]: '客户修改中',
-    [PPSState.ApprovedWithChanges]: '审核通过（有修改）',
 };
