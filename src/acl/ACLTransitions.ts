@@ -23,32 +23,27 @@ export const ACLTransitions: TransitionParam<
     },
     {
         from: ACLState.WaitingFinancialReview,
-        action: ACLAction.MarkAsPurchasing,
-        to: ACLState.WaitingPurchase,
-    },
-    {
-        from: ACLState.WaitingPurchase,
-        action: ACLAction.BookingInInventory,
-        to: ACLState.InInventory,
-    },
-    {
-        from: ACLState.InInventory,
-        action: ACLAction.BookingOutInventory,
+        action: ACLAction.FinanceReviewApprove,
         to: ACLState.WaitingTaking,
     },
     {
         from: ACLState.WaitingTaking,
-        action: ACLAction.ConfirmTaken,
+        action: ACLAction.PartialRelease,
+        to: ACLState.PartialReleasingAndPurchasing,
+    },
+    {
+        from: ACLState.WaitingTaking,
+        action: ACLAction.FullRelease,
+        to: ACLState.Taken,
+    },
+    {
+        from: ACLState.PartialReleasingAndPurchasing,
+        action: ACLAction.FullRelease,
         to: ACLState.Taken,
     },
     {
         from: ACLState.Taken,
         action: ACLAction.MailToCustomer,
         to: ACLState.MailedToCustomer,
-    },
-    {
-        from: ACLState.WaitingFinancialReview,
-        action: ACLAction.ConfirmRelease,
-        to: ACLState.WaitingTaking,
     }
 ]

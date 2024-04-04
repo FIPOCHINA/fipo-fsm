@@ -2,11 +2,10 @@ export declare enum ACLState {
     WaitingBrandReview = "WaitingBrandReview",
     BrandReviewRejected = "BrandReviewRejected",
     WaitingFinancialReview = "WaitingFinancialReview",
-    WaitingPurchase = "WaitingPurchase",
-    InInventory = "InInventory",
     WaitingTaking = "WaitingTaking",
     Taken = "Taken",
-    MailedToCustomer = "MailedToCustomer"
+    MailedToCustomer = "MailedToCustomer",
+    PartialReleasingAndPurchasing = "PartialReleasingAndPurchasing"
 }
 export declare const ACLStateDisplayName: Record<ACLState, string>;
 //# sourceMappingURL=ACLState.d.ts.map

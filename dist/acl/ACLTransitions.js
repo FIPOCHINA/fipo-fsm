@@ -21,32 +21,27 @@ exports.ACLTransitions = [
     },
     {
         from: ACLState_1.ACLState.WaitingFinancialReview,
-        action: ACLAction_1.ACLAction.MarkAsPurchasing,
-        to: ACLState_1.ACLState.WaitingPurchase,
-    },
-    {
-        from: ACLState_1.ACLState.WaitingPurchase,
-        action: ACLAction_1.ACLAction.BookingInInventory,
-        to: ACLState_1.ACLState.InInventory,
-    },
-    {
-        from: ACLState_1.ACLState.InInventory,
-        action: ACLAction_1.ACLAction.BookingOutInventory,
+        action: ACLAction_1.ACLAction.FinanceReviewApprove,
         to: ACLState_1.ACLState.WaitingTaking,
     },
     {
         from: ACLState_1.ACLState.WaitingTaking,
-        action: ACLAction_1.ACLAction.ConfirmTaken,
+        action: ACLAction_1.ACLAction.PartialRelease,
+        to: ACLState_1.ACLState.PartialReleasingAndPurchasing,
+    },
+    {
+        from: ACLState_1.ACLState.WaitingTaking,
+        action: ACLAction_1.ACLAction.FullRelease,
+        to: ACLState_1.ACLState.Taken,
+    },
+    {
+        from: ACLState_1.ACLState.PartialReleasingAndPurchasing,
+        action: ACLAction_1.ACLAction.FullRelease,
         to: ACLState_1.ACLState.Taken,
     },
     {
         from: ACLState_1.ACLState.Taken,
         action: ACLAction_1.ACLAction.MailToCustomer,
         to: ACLState_1.ACLState.MailedToCustomer,
-    },
-    {
-        from: ACLState_1.ACLState.WaitingFinancialReview,
-        action: ACLAction_1.ACLAction.ConfirmRelease,
-        to: ACLState_1.ACLState.WaitingTaking,
     }
 ];
