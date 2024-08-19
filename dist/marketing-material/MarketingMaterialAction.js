@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.MarketingMaterialActionDisplayName = exports.MarketingMaterialAction = void 0;
 var MarketingMaterialAction;
 (function (MarketingMaterialAction) {
-    MarketingMaterialAction["Finalize"] = "Finalize";
     MarketingMaterialAction["SendForReview"] = "SendForReview";
     MarketingMaterialAction["ReviewApprove"] = "ReviewApprove";
     MarketingMaterialAction["NotifyCustomer"] = "NotifyCustomer";
@@ -12,7 +11,6 @@ var MarketingMaterialAction;
     MarketingMaterialAction["Cancel"] = "Cancel";
 })(MarketingMaterialAction || (exports.MarketingMaterialAction = MarketingMaterialAction = {}));
 exports.MarketingMaterialActionDisplayName = {
-    [MarketingMaterialAction.Finalize]: '定稿',
     [MarketingMaterialAction.SendForReview]: '送审',
     [MarketingMaterialAction.ReviewApprove]: '审核通过',
     [MarketingMaterialAction.ReviewReject]: '审核未通过',

@@ -1,5 +1,4 @@
 export enum MarketingMaterialAction {
-  Finalize = 'Finalize',
   SendForReview = 'SendForReview',
   ReviewApprove = 'ReviewApprove',
   NotifyCustomer = 'NotifyCustomer',
@@ -9,7 +8,6 @@ export enum MarketingMaterialAction {
 }
 
 export const MarketingMaterialActionDisplayName: Record<MarketingMaterialAction, string> = {
-  [MarketingMaterialAction.Finalize]: '定稿',
   [MarketingMaterialAction.SendForReview]: '送审',
   [MarketingMaterialAction.ReviewApprove]: '审核通过',
   [MarketingMaterialAction.ReviewReject]: '审核未通过',

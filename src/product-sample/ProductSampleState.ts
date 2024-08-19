@@ -1,5 +1,4 @@
 export enum ProductSampleState {
-  WaitingForPPS = 'WaitingForPPS',
   WaitingForPS = 'WaitingForPS',
   OrganizedForSending = 'OrganizedForSending',
   InReview = 'InReview',
@@ -7,16 +6,17 @@ export enum ProductSampleState {
   CustomerNotified = 'CustomerNotified',
   Cancelled = 'Cancelled',
   ReviewRejected = 'ReviewRejected',
-  CustomerModifyingForRejection = 'CustomerModifyingForRejection',
+  Modifying = 'Modifying',
 }
 
 export const ProductSampleStateDisplayName: Record<ProductSampleState, string> = {
-  [ProductSampleState.WaitingForPPS]: '等待产前样完成',
   [ProductSampleState.WaitingForPS]: '等待大货样',
   [ProductSampleState.OrganizedForSending]: '寄送整理已完成',
   [ProductSampleState.InReview]: '正式审核中',
-  [ProductSampleState.CustomerNotified]: '已通知客户',
-  [ProductSampleState.Cancelled]: '款式取消',
   [ProductSampleState.ReviewRejected]: '审核未通过',
-  [ProductSampleState.CustomerModifyingForRejection]: '客户修改中',
-  [ProductSampleState.ReviewApproved]: '审核通过',}
+  [ProductSampleState.Modifying]: '修改中',
+  [ProductSampleState.CustomerNotified]: '已通知客户',
+  [ProductSampleState.ReviewApproved]: '审核通过',
+  [ProductSampleState.Cancelled]: '款式取消',
+
+}

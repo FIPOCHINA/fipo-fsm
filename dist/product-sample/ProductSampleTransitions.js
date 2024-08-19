@@ -5,11 +5,6 @@ const ProductSampleState_1 = require("./ProductSampleState");
 const ProductSampleAction_1 = require("./ProductSampleAction");
 exports.ProductSampleTransitions = [
     {
-        from: ProductSampleState_1.ProductSampleState.WaitingForPPS,
-        action: ProductSampleAction_1.ProductSampleAction.PPSDone,
-        to: ProductSampleState_1.ProductSampleState.WaitingForPS
-    },
-    {
         from: ProductSampleState_1.ProductSampleState.WaitingForPS,
         action: ProductSampleAction_1.ProductSampleAction.Organize,
         to: ProductSampleState_1.ProductSampleState.OrganizedForSending
@@ -37,11 +32,11 @@ exports.ProductSampleTransitions = [
     {
         from: ProductSampleState_1.ProductSampleState.ReviewRejected,
         action: ProductSampleAction_1.ProductSampleAction.NotifyCustomerOfRejection,
-        to: ProductSampleState_1.ProductSampleState.CustomerModifyingForRejection
+        to: ProductSampleState_1.ProductSampleState.Modifying
     },
     {
-        from: ProductSampleState_1.ProductSampleState.CustomerModifyingForRejection,
-        action: ProductSampleAction_1.ProductSampleAction.Organize,
-        to: ProductSampleState_1.ProductSampleState.OrganizedForSending
+        from: ProductSampleState_1.ProductSampleState.Modifying,
+        action: ProductSampleAction_1.ProductSampleAction.SendForReview,
+        to: ProductSampleState_1.ProductSampleState.InReview
     }
 ];

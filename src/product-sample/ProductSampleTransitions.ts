@@ -6,11 +6,7 @@ export const ProductSampleTransitions: TransitionParam<
     ProductSampleAction,
     ProductSampleState
 >[] = [
-    {
-        from: ProductSampleState.WaitingForPPS,
-        action: ProductSampleAction.PPSDone,
-        to: ProductSampleState.WaitingForPS
-    },
+
     {
         from: ProductSampleState.WaitingForPS,
         action: ProductSampleAction.Organize,
@@ -39,11 +35,11 @@ export const ProductSampleTransitions: TransitionParam<
     {
         from: ProductSampleState.ReviewRejected,
         action: ProductSampleAction.NotifyCustomerOfRejection,
-        to: ProductSampleState.CustomerModifyingForRejection
+        to: ProductSampleState.Modifying
     },
     {
-        from: ProductSampleState.CustomerModifyingForRejection,
-        action: ProductSampleAction.Organize,
-        to: ProductSampleState.OrganizedForSending
+        from: ProductSampleState.Modifying,
+        action: ProductSampleAction.SendForReview,
+        to: ProductSampleState.InReview
     }
 ]

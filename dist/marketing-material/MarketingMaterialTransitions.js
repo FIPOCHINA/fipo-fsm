@@ -10,16 +10,6 @@ exports.MarketingMaterialTransitions = [
         to: MarketingMaterialState_1.MarketingMaterialState.Cancelled
     },
     {
-        from: MarketingMaterialState_1.MarketingMaterialState.Draft,
-        action: MarketingMaterialAction_1.MarketingMaterialAction.Finalize,
-        to: MarketingMaterialState_1.MarketingMaterialState.Finalized
-    },
-    {
-        from: MarketingMaterialState_1.MarketingMaterialState.Finalized,
-        action: MarketingMaterialAction_1.MarketingMaterialAction.SendForReview,
-        to: MarketingMaterialState_1.MarketingMaterialState.InReview
-    },
-    {
         from: MarketingMaterialState_1.MarketingMaterialState.InReview,
         action: MarketingMaterialAction_1.MarketingMaterialAction.ReviewApprove,
         to: MarketingMaterialState_1.MarketingMaterialState.ReviewApproved
@@ -37,11 +27,11 @@ exports.MarketingMaterialTransitions = [
     {
         from: MarketingMaterialState_1.MarketingMaterialState.ReviewRejected,
         action: MarketingMaterialAction_1.MarketingMaterialAction.NotifyCustomerOfRejection,
-        to: MarketingMaterialState_1.MarketingMaterialState.CustomerModifyingForRejection
+        to: MarketingMaterialState_1.MarketingMaterialState.Modifying
     },
     {
-        from: MarketingMaterialState_1.MarketingMaterialState.CustomerModifyingForRejection,
-        action: MarketingMaterialAction_1.MarketingMaterialAction.Finalize,
-        to: MarketingMaterialState_1.MarketingMaterialState.Finalized
+        from: MarketingMaterialState_1.MarketingMaterialState.Modifying,
+        action: MarketingMaterialAction_1.MarketingMaterialAction.SendForReview,
+        to: MarketingMaterialState_1.MarketingMaterialState.InReview
     }
 ];

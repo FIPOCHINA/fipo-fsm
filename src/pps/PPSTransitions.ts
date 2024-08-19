@@ -12,22 +12,7 @@ export const PPSTransitions: TransitionParam<
         to: PPSState.Cancelled
     },
     {
-        from: PPSState.WaitingForDesignDoc,
-        action: PPSAction.DesignDocDone,
-        to: PPSState.WaitingForPPS
-    },
-    {
         from: PPSState.WaitingForPPS,
-        action: PPSAction.Organize,
-        to: PPSState.OrganizedForSending
-    },
-    {
-        from: PPSState.OrganizedForSending,
-        action: PPSAction.InternalReviewApprove,
-        to: PPSState.InternalReviewed
-    },
-    {
-        from: PPSState.InternalReviewed,
         action: PPSAction.SendForReview,
         to: PPSState.InReview
     },
@@ -42,29 +27,19 @@ export const PPSTransitions: TransitionParam<
         to: PPSState.ReviewRejected
     },
     {
-        from: PPSState.InReview,
-        action: PPSAction.ReviewApproveWithChanges,
-        to: PPSState.ReviewApprovedWithChanges
+        from: PPSState.ReviewRejected,
+        action: PPSAction.NotifyCustomerOfRejection,
+        to: PPSState.Modifying
+    },
+    {
+        from: PPSState.Modifying,
+        action: PPSAction.SendForReview,
+        to: PPSState.InReview
     },
     {
         from: PPSState.ReviewApproved,
         action: PPSAction.NotifyCustomer,
         to: PPSState.CustomerNotified
     },
-    {
-        from: PPSState.ReviewRejected,
-        action: PPSAction.NotifyCustomerOfRejection,
-        to: PPSState.CustomerModifyingForRejection
-    },
-    {
-        from: PPSState.CustomerModifyingForRejection,
-        action: PPSAction.Organize,
-        to: PPSState.OrganizedForSending
-    },
-    {
-        from: PPSState.ReviewApprovedWithChanges,
-        action: PPSAction.NotifyCustomerOfChanges,
-        to: PPSState.CustomerNotified
-    }
 
 ]

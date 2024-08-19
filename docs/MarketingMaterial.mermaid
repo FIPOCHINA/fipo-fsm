@@ -1,9 +1,7 @@
 stateDiagram-v2
 [*] --> Cancelled : Cancel
-Draft --> Finalized : Finalize
-Finalized --> InReview : SendForReview
 InReview --> ReviewApproved : ReviewApprove
 InReview --> ReviewRejected : ReviewReject
 ReviewApproved --> CustomerNotified : NotifyCustomer
-ReviewRejected --> CustomerModifyingForRejection : NotifyCustomerOfRejection
-CustomerModifyingForRejection --> Finalized : Finalize
+ReviewRejected --> Modifying : NotifyCustomerOfRejection
+Modifying --> InReview : SendForReview

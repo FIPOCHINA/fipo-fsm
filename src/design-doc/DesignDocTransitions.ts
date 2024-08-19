@@ -12,11 +12,6 @@ export const DesignDocTransitions: TransitionParam<
     to: DesignDocState.Cancelled,
   },
   {
-    from: DesignDocState.Draft,
-    action: DesignDocAction.Finalize,
-    to: DesignDocState.FinalDraft,
-  },
-  {
     from: DesignDocState.FinalDraft,
     action: DesignDocAction.SendForReview,
     to: DesignDocState.InReview,
@@ -32,11 +27,6 @@ export const DesignDocTransitions: TransitionParam<
     to: DesignDocState.ReviewRejected,
   },
   {
-    from: DesignDocState.InReview,
-    action: DesignDocAction.ReviewApproveWithChanges,
-    to: DesignDocState.ReviewApprovedWithChanges,
-  },
-  {
     from: DesignDocState.ReviewApproved,
     action: DesignDocAction.NotifyCustomer,
     to: DesignDocState.CustomerNotified,
@@ -44,32 +34,12 @@ export const DesignDocTransitions: TransitionParam<
   {
     from: DesignDocState.ReviewRejected,
     action: DesignDocAction.NotifyCustomerOfRejection,
-    to: DesignDocState.CustomerModifyingForRejection,
+    to: DesignDocState.Modifying,
   },
   {
-    from: DesignDocState.CustomerModifyingForRejection,
-    action: DesignDocAction.Finalize,
-    to: DesignDocState.FinalDraft,
-  },
-  {
-    from: DesignDocState.ReviewApprovedWithChanges,
-    action: DesignDocAction.NotifyCustomerOfChanges,
-    to: DesignDocState.CustomerModifyingForChanges,
-  },
+    from: DesignDocState.Modifying,
+    action: DesignDocAction.SendForReview,
+    to: DesignDocState.InReview
+  }
 
-  {
-    from: DesignDocState.CustomerModifyingForChanges,
-    action: DesignDocAction.NotifyCustomer,
-    to: DesignDocState.CustomerNotified,
-  },
-  {
-    from: DesignDocState.ReviewApprovedWithChanges,
-    action: DesignDocAction.InHouseChanged,
-    to: DesignDocState.InHouseChanged,
-  },
-  {
-    from: DesignDocState.InHouseChanged,
-    action: DesignDocAction.NotifyCustomer,
-    to: DesignDocState.CustomerNotified,
-  },
 ]

@@ -1,5 +1,4 @@
 export declare enum ProductSampleState {
-    WaitingForPPS = "WaitingForPPS",
     WaitingForPS = "WaitingForPS",
     OrganizedForSending = "OrganizedForSending",
     InReview = "InReview",
@@ -7,7 +6,7 @@ export declare enum ProductSampleState {
     CustomerNotified = "CustomerNotified",
     Cancelled = "Cancelled",
     ReviewRejected = "ReviewRejected",
-    CustomerModifyingForRejection = "CustomerModifyingForRejection"
+    Modifying = "Modifying"
 }
 export declare const ProductSampleStateDisplayName: Record<ProductSampleState, string>;
 //# sourceMappingURL=ProductSampleState.d.ts.map

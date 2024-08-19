@@ -1,5 +1,4 @@
 export declare enum MarketingMaterialAction {
-    Finalize = "Finalize",
     SendForReview = "SendForReview",
     ReviewApprove = "ReviewApprove",
     NotifyCustomer = "NotifyCustomer",

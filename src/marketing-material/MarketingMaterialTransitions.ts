@@ -11,16 +11,7 @@ export const MarketingMaterialTransitions: TransitionParam<
         action: MarketingMaterialAction.Cancel,
         to: MarketingMaterialState.Cancelled
     },
-    {
-        from: MarketingMaterialState.Draft,
-        action: MarketingMaterialAction.Finalize,
-        to: MarketingMaterialState.Finalized
-    },
-    {
-        from: MarketingMaterialState.Finalized,
-        action: MarketingMaterialAction.SendForReview,
-        to: MarketingMaterialState.InReview
-    },
+
     {
         from: MarketingMaterialState.InReview,
         action: MarketingMaterialAction.ReviewApprove,
@@ -40,11 +31,12 @@ export const MarketingMaterialTransitions: TransitionParam<
     {
         from: MarketingMaterialState.ReviewRejected,
         action: MarketingMaterialAction.NotifyCustomerOfRejection,
-        to: MarketingMaterialState.CustomerModifyingForRejection
-    },
+        to: MarketingMaterialState.Modifying
+    }
+    ,
     {
-        from: MarketingMaterialState.CustomerModifyingForRejection,
-        action: MarketingMaterialAction.Finalize,
-        to: MarketingMaterialState.Finalized
+        from: MarketingMaterialState.Modifying,
+        action: MarketingMaterialAction.SendForReview,
+        to: MarketingMaterialState.InReview
     }
 ]

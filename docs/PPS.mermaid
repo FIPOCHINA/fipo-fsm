@@ -1,13 +1,8 @@
 stateDiagram-v2
 [*] --> Cancelled : Cancel
-WaitingForDesignDoc --> WaitingForPPS : DesignDocDone
-WaitingForPPS --> OrganizedForSending : Organize
-OrganizedForSending --> InternalReviewed : InternalReviewApprove
-InternalReviewed --> InReview : SendForReview
+WaitingForPPS --> InReview : SendForReview
 InReview --> ReviewApproved : ReviewApprove
 InReview --> ReviewRejected : ReviewReject
-InReview --> ReviewApprovedWithChanges : ReviewApproveWithChanges
+ReviewRejected --> Modifying : NotifyCustomerOfRejection
+Modifying --> InReview : SendForReview
 ReviewApproved --> CustomerNotified : NotifyCustomer
-ReviewRejected --> CustomerModifyingForRejection : NotifyCustomerOfRejection
-CustomerModifyingForRejection --> OrganizedForSending : Organize
-ReviewApprovedWithChanges --> CustomerNotified : NotifyCustomerOfChanges
